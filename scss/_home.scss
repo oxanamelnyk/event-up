@@ -1,0 +1,224 @@
+.hero {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    @media (max-width: $breakpoint768) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__title {
+    max-width: 63rem;
+  }
+  &__descr {
+    padding: 2.4rem 0 5.6rem;
+    max-width: 57rem;
+    @media (max-width: $breakpoint768) {
+      padding: 1.6rem 0 4rem;
+    }
+  }
+  &__img {
+    max-width: 52.2rem;
+    @media (max-width: $breakpoint992) {
+      max-width: 35rem;
+    }
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+  &__btns {
+    display: flex;
+    gap: 2.4rem;
+    @media (max-width: $breakpoint480) {
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  }
+  &__btn {
+    position: relative;
+    padding: 1.6rem 4.8rem 1.6rem 2.4rem;
+  }
+  &__arrow {
+    margin-right: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+.partnership {
+  background: $colorNeutral-700;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  &__logo {
+    width: 14rem;
+  }
+}
+.about {
+  background: $colorGreyLight;
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    @media (max-width: $breakpoint992) {
+      gap: 3.2rem;
+    }
+    @media (max-width: $breakpoint768) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  &__img {
+    max-width: 52.2rem;
+    @media (max-width: $breakpoint992) {
+      max-width: 35rem;
+    }
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    max-width: 42rem;
+    margin-bottom: 2.4rem;
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 1.6rem;
+      max-width: 100%;
+    }
+  }
+  &__text {
+    max-width: 46rem;
+    @media (max-width: $breakpoint992) {
+      max-width: 100%;
+    }
+  }
+}
+.display-room {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+    text-align: center;
+    @media (max-width: $breakpoint768) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__title {
+    max-width: 70rem;
+    padding-bottom: 1.6rem;
+  }
+  &__img {
+    max-width: 100.7rem;
+  }
+}
+.features {
+  position: relative;
+  overflow: hidden;
+  background: $colorNeutral-800 url(../img/home/bg.png) no-repeat center / cover;
+  &__img {
+    position: absolute;
+    top: 10rem;
+    right: -2rem;
+    max-width: 62rem;
+    @media (max-width: $breakpoint1194) {
+      top: 12rem;
+      max-width: 40%;
+    }
+    @media (max-width: $breakpoint992) {
+      top: 5rem;
+      max-width: 35%;
+    }
+    @media (max-width: $breakpoint768) {
+      max-width: 92%;
+      position: relative;
+      top: 0rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    &:last-child {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 30rem;
+      @media (max-width: $breakpoint1194) {
+        margin-top: 15rem;
+      }
+      @media (max-width: $breakpoint992) {
+        margin-top: 10rem;
+      }
+      @media (max-width: $breakpoint768) {
+        flex-direction: column;
+        margin-top: 6rem;
+        gap: 6px;
+      }
+      @media (max-width: $breakpoint480) {
+        margin-top: 2rem;
+      }
+    }
+  }
+  &__title {
+    max-width: 55rem;
+    color: $colorWhite;
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+  &__descr {
+    margin: 2.4rem 0 4rem;
+    color: $colorNeutral-50;
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+  &__descr-last {
+    max-width: 50rem;
+  }
+  &__lists {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-between;
+    @media (max-width: $breakpoint768) {
+      gap: 2rem;
+    }
+    @media (max-width: $breakpoint480) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-left: 3.6rem;
+    margin-bottom: 2rem;
+    &::before {
+      content: url(../img/home/tick-circle.svg);
+      position: absolute;
+      top: 60%;
+      left: -3.6rem;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+  &__img-last {
+    max-width: 61rem;
+    order: -1;
+    margin: 0 auto;
+    @media (max-width: $breakpoint1194) {
+      max-width: 50rem;
+    }
+    @media (max-width: $breakpoint992) {
+      max-width: 35rem;
+    }
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+html {
+  font-size: 62.5%;
+}
+
+// Container
+.container {
+  max-width: ($containerWidth + $containerPadding) + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $containerSidePadding + px;
+  position: relative;
+
+  @media (max-width: $breakpoint1450) {
+    max-width: 1200px;
+  }
+
+  @media (max-width: $breakpoint992) {
+    max-width: 970px;
+  }
+
+  @media (max-width: $breakpoint768) {
+    max-width: 740px;
+  }
+
+  @media (max-width: $breakpoint480) {
+    max-width: none;
+  }
+}
+
+// Body & Locked
+body {
+  font: 400 2rem / 3.4rem $fontMain;
+  color: $colorNeutral-500;
+  @media (max-width: $breakpoint480) {
+    font: 400 1.6rem / 2.8rem $fontMain;
+  }
+  &.locked {
+    overflow: hidden;
+  }
+  // Dark mode styles
+  // &.dark {
+  //     background: #242424;
+  // }
+}
+
+.dark {
+  color: $colorWhite;
+  background: $colorNeutral-800;
+}
+
+.p-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.p-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.p-8 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @media (max-width: $breakpoint992) {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  @media (max-width: $breakpoint768) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.p-10 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  @media (max-width: $breakpoint992) {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  @media (max-width: $breakpoint768) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.p-12 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  @media (max-width: $breakpoint992) {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+  }
+  @media (max-width: $breakpoint768) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+h1 {
+  font: 600 7rem / 8.4rem $fontMain;
+  color: $colorNeutral-800;
+
+  @media (max-width: $breakpoint1194) {
+    font: 600 5rem / 6rem $fontMain;
+  }
+  @media (max-width: $breakpoint768) {
+    font: 600 4.6rem / 5.2rem $fontMain;
+  }
+  @media (max-width: $breakpoint480) {
+    font: 600 3.6rem / 4.5rem $fontMain;
+  }
+}
+h2 {
+  font: 600 4.4rem / 5.5rem $fontMain;
+  color: $colorNeutral-800;
+  padding: 1.6rem 0 2.4rem;
+  @media (max-width: $breakpoint768) {
+    font: 600 3.2rem / 4.4rem $fontMain;
+  }
+  @media (max-width: $breakpoint480) {
+    font: 600 2.8rem / 3.6rem $fontMain;
+  }
+}
+h3 {
+  font: 600 2.8rem / 3.6rem $fontMain;
+  color: $colorNeutral-800;
+}
+h4 {
+  font: 600 2rem / 2.8rem $fontMain;
+}
+h5 {
+  font: 400 2rem / 2.8rem $fontMain;
+}
+h6 {
+  font: 400 1.6rem / 2.8rem $fontMain;
+}
+.text-small {
+  font: 400 1.4rem / 2.6rem $fontMain;
+}
+.text-regular {
+  font: 400 1.6rem / 2.8rem $fontMain;
+}
+
+.unter-title {
+  font: 500 1.6rem / 2.8rem $fontMain;
+  color: $colorNeutral-200;
+  letter-spacing: 3.2px;
+  position: relative;
+  margin-left: 3rem;
+  text-transform: uppercase;
+  bottom: 1.6rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+    transform: translateX(50%);
+    width: 2rem;
+    height: 2px;
+    background-color: $colorNeutral-200;
+    z-index: 1;
+  }
+}
+
+.btn {
+  font: 500 16px / 28px $fontMain;
+  background-color: $colorRed;
+  color: $colorWhite;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  &__outline {
+    background-color: transparent;
+    border: 1px solid $colorWhite;
+  }
+  &__outline--red {
+    background-color: transparent;
+    color: $colorRed;
+    border: 1px solid $colorRed;
+  }
+}
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+// Animations
+// Fade
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

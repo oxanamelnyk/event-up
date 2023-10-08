@@ -1,0 +1,134 @@
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    @media (max-width: $breakpoint992) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $breakpoint768) {
+      gap: 4rem;
+    }
+  }
+  &__logo {
+    max-width: 27rem;
+    @media (max-width: $breakpoint768) {
+      max-width: 20rem;
+    }
+  }
+  &__subtitle {
+    margin-top: 1.6rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  &__list-title {
+    margin-bottom: 1.6rem;
+  }
+  &__item {
+    font: 400 1.6rem / 2.8rem $fontMain;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    width: 28.6rem;
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+  &__col-title {
+    margin-bottom: 2.4rem;
+    @media (max-width: $breakpoint768) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  &__text {
+    color: $colorNeutral-400;
+  }
+  &__form {
+    position: relative;
+    width: 100%;
+    @media (max-width: $breakpoint768) {
+      width: fit-content;
+    }
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+    }
+  }
+  &__input {
+    padding: 1.6rem;
+    border: 1px solid $colorNeutral-50;
+    border-radius: 8px;
+    margin: 2.4rem 0 2.4rem;
+    width: 100%;
+
+    @media (max-width: $breakpoint768) {
+      width: fit-content;
+    }
+    @media (max-width: $breakpoint480) {
+      width: 100%;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+  }
+  &__sub-text {
+    font: 400 1.2rem / 1.6rem $fontMain;
+  }
+}
+
+.footer-bottom {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    ::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: calc(100% - 48px);
+      height: 1px;
+      background-color: $colorNeutral-50;
+    }
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    display: flex;
+    gap: 8rem;
+    @media (max-width: $breakpoint768) {
+      gap: 2rem;
+      flex-direction: column-reverse;
+    }
+    @media (max-width: $breakpoint480) {
+    }
+  }
+  &__privacy-list {
+    display: flex;
+    gap: 2.4rem;
+    @media (max-width: $breakpoint768) {
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    @media (max-width: $breakpoint480) {
+      gap: 1rem;
+    }
+  }
+  &__social-list {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    @media (max-width: $breakpoint768) {
+      order: -1;
+    }
+  }
+}

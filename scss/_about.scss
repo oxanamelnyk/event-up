@@ -1,0 +1,99 @@
+.about-hero {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+  &__text {
+    max-width: 60rem;
+  }
+}
+.about-us {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+  }
+  &__descr:first-child {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.team {
+  &__title {
+    max-width: 73rem;
+    margin-bottom: 8rem;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $breakpoint992) {
+      gap: 2rem;
+    }
+    @media (max-width: $breakpoint480) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5rem;
+    }
+  }
+  &__item {
+    display: flex;
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+    }
+    &:nth-child(4n + 3),
+    &:nth-child(4n + 4) {
+      flex-direction: row-reverse;
+      @media (max-width: $breakpoint992) {
+        flex-direction: column;
+      }
+    }
+  }
+  &__img {
+    width: 50%;
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    width: 50%;
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: $breakpoint1194) {
+      padding: 0 1.6rem;
+    }
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
+  }
+  &__content-title {
+    color: $colorWhite;
+  }
+  &__content-descr {
+    font: 400 1.6rem / 2.8rem $fontMain;
+    color: $colorNeutral-300;
+    margin-bottom: 1.6rem;
+  }
+  &__content-text {
+    font: 400 1.6rem / 2.8rem $fontMain;
+  }
+  &__join {
+    display: flex;
+    justify-content: space-between;
+    gap: 7rem;
+  }
+  &__join-descr {
+    max-width: 60rem;
+  }
+  &__join-link {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}

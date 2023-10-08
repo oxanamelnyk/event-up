@@ -1,0 +1,180 @@
+.career-home {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 9rem;
+  }
+  &__title {
+    max-width: 40rem;
+  }
+  &__content {
+    max-width: 59rem;
+  }
+  &__quote {
+    max-width: 100rem;
+    text-align: center;
+    margin: 0 auto;
+    font: 400 3.2rem / 4.2rem $fontMain;
+    font-style: italic;
+  }
+}
+.career-values {
+  position: relative;
+  height: 60rem;
+  @media (max-width: $breakpoint992) {
+    height: 80rem;
+    // display: flex;
+    // flex-direction: column;
+  }
+  @media (max-width: $breakpoint992) {
+    height: auto;
+  }
+  &__container {
+    color: $colorWhite;
+  }
+  &__item {
+    padding: 8rem 4.8rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: $breakpoint992) {
+      padding: 8rem 2rem;
+    }
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 5rem 2rem;
+    }
+    &:first-child {
+      background-color: $colorRed-100;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40%;
+      @media (max-width: $breakpoint992) {
+        position: static;
+        width: 100%;
+        top: 0;
+        transform: translateY(0%);
+      }
+    }
+    &:last-child {
+      background-color: $colorRed-800;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5.6rem;
+      align-items: center;
+      justify-content: center;
+      padding-left: 12rem;
+      @media (max-width: $breakpoint1194) {
+        padding-left: 4.8rem;
+      }
+      @media (max-width: $breakpoint992) {
+        position: static;
+        width: 100%;
+        padding-left: 0;
+        top: 0;
+        transform: translateY(0%);
+        padding: 8rem 2rem;
+      }
+      @media (max-width: $breakpoint768) {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 5rem 2rem;
+      }
+    }
+  }
+  &__unter-title {
+    color: $colorWhite;
+    &::before {
+      background-color: $colorWhite;
+    }
+  }
+  &__title {
+    color: $colorWhite;
+    margin: 1.6rem 0 2.4rem;
+  }
+  &__content {
+    max-width: 28rem;
+    @media (max-width: $breakpoint768) {
+      max-width: 100%;
+    }
+  }
+  &__subtitle {
+    margin: 2.4rem 0 0.8rem;
+  }
+}
+.career-about {
+  margin: 8rem 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+  }
+  &__item {
+    position: relative;
+    &:first-child {
+      max-width: 52.2rem;
+    }
+    &:last-child {
+      max-width: 86rem;
+      @media (max-width: $breakpoint1450) {
+        width: 60rem;
+      }
+    }
+  }
+  &__title {
+    width: 70rem;
+    @media (max-width: $breakpoint1450) {
+      width: 60rem;
+    }
+  }
+  &__img1 {
+    max-width: 52.2rem;
+    position: absolute;
+    top: -29.5rem;
+    left: 0;
+  }
+  &__img2 {
+    max-width: 24.9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__img3 {
+    max-width: 24.9rem;
+    position: absolute;
+    top: 0;
+    left: 26.3rem;
+  }
+  &__text {
+    padding-bottom: 2.4rem;
+  }
+}
+.career-reasons {
+  background-color: $colorGreyLight;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+  }
+  &__counter {
+    margin-top: 5.6rem;
+    display: flex;
+    gap: 7rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+  &__num {
+    margin-top: 2.4rem;
+    font: 700 2.8rem / 4.2rem $fontMain;
+    color: $colorNeutral-800;
+  }
+}

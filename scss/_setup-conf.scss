@@ -1,0 +1,45 @@
+.setap-conference {
+  &__wrapper {
+    background: $colorRedDark url(../img/home/confer.png) no-repeat center /
+      cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.5rem;
+    padding: 10rem;
+    @media (max-width: $breakpoint992) {
+      justify-content: space-around;
+      padding: 7.5rem 2rem;
+    }
+    @media (max-width: $breakpoint768) {
+      align-items: flex-start;
+      padding: 5rem 2rem;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+  }
+  &__content {
+    max-width: 50rem;
+    color: $colorWhite;
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+  &__title {
+    color: $colorWhite;
+    margin-bottom: 1.6rem;
+  }
+  &__btns {
+    display: flex;
+    gap: 2.4rem;
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      gap: 1.6rem;
+      width: fit-content;
+    }
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
